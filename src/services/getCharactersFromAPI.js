@@ -8,6 +8,9 @@ const getUsersFromApi = () => {
                     photo: character.image,
                     specie: character.species,
                     id: character.id,
+                    planet: character.origin.name,
+                    episodes: character.episode.length,
+                    status: character.status,
                 }
             })
             //console.log(parsedCharacters);

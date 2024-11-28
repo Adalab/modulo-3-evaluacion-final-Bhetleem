@@ -7,9 +7,12 @@ function FilterByName({onChangeName}) {
         //console.log(onChangeName);
     }
     
-
+    const enterPrevent=(event) =>{
+        event.preventDefault();
+    }
+    
   return (
-    <form>
+    <form onSubmit={enterPrevent}>
         <input onChange={handleSearchName} type="text" placeholder="Nombre del personaje..." />
       
     </form>
