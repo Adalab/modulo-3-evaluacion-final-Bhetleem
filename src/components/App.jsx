@@ -6,6 +6,7 @@ import FilterByName from "./FilterByName";
 import CharacterDetail from "./CharacterDetail";
 import { matchPath, Route, Routes, useLocation } from "react-router-dom";
 import localStorage from "../services/localStorage";
+import "../scss/App.scss";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -49,8 +50,8 @@ function App() {
 
   return (
     <>
-      <header><h1>Rick and Morty</h1></header>
-      <main>
+      <header className="header"><h1 className="header_title">Rick and Morty</h1></header>
+      <main className="main">
         <Routes>
           <Route path="/" element={(
             <>

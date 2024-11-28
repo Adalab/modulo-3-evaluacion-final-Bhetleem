@@ -1,0 +1,17 @@
+.main_card{
+    background-color: rgb(0, 187, 203);
+    margin-bottom: 5%;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &_image{
+       
+    }
+    &_name{
+        color: white;
+    }
+    &_specie{
+        color: white;
+    }
+}

@@ -1,3 +1,4 @@
+import "../scss/layout/FilterByName.scss";
 
 function FilterByName({onChangeName, savedFilterName}) {
     const handleSearchName = (event) => {

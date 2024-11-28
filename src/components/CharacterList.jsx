@@ -1,4 +1,5 @@
 import CharacterCard from "./CharacterCard";
+import "../scss/layout/CharacterList.scss";
 
 function CharacterList({characters, filterName}) {
     //console.log(characters);
@@ -13,7 +14,7 @@ function CharacterList({characters, filterName}) {
     })    
 
   return (
-    <ul>
+    <ul className="main_list">
         {characterItems}
     </ul>
   )

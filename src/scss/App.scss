@@ -1,1 +1,12 @@
 @import './core/reset';
+
+.header{
+    background-color: black;
+    &_title{
+        color: white;
+    }
+}
+
+.main{
+    background-color: black;
+}
