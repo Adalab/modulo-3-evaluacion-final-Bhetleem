@@ -44,7 +44,7 @@ function App() {
           <Route path="/" element={(
             <>
               <FilterByName onChangeName={handleFilterName} />
-              <CharacterList characters={filteredCharactersByName} />
+              <CharacterList filterName={filterName} characters={filteredCharactersByName} />
             </>
             )}/>
           <Route path="/character/:idCharacter" element={(
