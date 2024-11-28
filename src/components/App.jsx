@@ -5,6 +5,7 @@ import getCharactersFromAPI from "../services/getCharactersFromAPI";
 import FilterByName from "./FilterByName";
 import CharacterDetail from "./CharacterDetail";
 import { matchPath, Route, Routes, useLocation } from "react-router-dom";
+import localStorage from "../services/localStorage";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -19,8 +20,18 @@ function App() {
   const handleFilterName = (nameValueInput) => {
     //console.log(nameValueInput);
     setFilterName(nameValueInput);
+    localStorage.set("filterName", nameValueInput);
   }
   //console.log(filterName);
+
+  const savedFilterName = localStorage.get("filterName");
+  //console.log(savedInputLS);
+
+  useEffect(() => {
+    if (savedFilterName === ""){
+    setFilterName("");
+  }})
+  
 
   const filteredCharactersByName = characters.filter((character) => {
     return character.name.toLowerCase().includes(filterName.toLowerCase());
@@ -43,7 +54,7 @@ function App() {
         <Routes>
           <Route path="/" element={(
             <>
-              <FilterByName onChangeName={handleFilterName} />
+              <FilterByName onChangeName={handleFilterName} savedFilterName={savedFilterName} />
               <CharacterList filterName={filterName} characters={filteredCharactersByName} />
             </>
             )}/>
