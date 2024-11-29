@@ -6,6 +6,12 @@
     justify-content: center;
     &_container{
         width: 500px;
+        @media (max-width: 380px){
+            width: 300px;
+        }
+        @media (max-width: 700px){
+            width: 400px;
+        }
         &_logo{
             width: 100%;
         }
@@ -14,5 +20,6 @@
 
 .main{
     background-color: black;
+    height: 100%;
     
 }
