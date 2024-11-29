@@ -1,0 +1,31 @@
+.selectedCard{
+    background-color: rgb(0, 187, 203);
+   max-width: 300px;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &_image{
+        width: 100%;
+    }
+    &_name{
+        color: white;
+    }
+    &_specie{
+        color: white;
+    }
+    &_planet{
+        color: white;
+    }
+    &_episodes{
+        color: white;
+    }
+    &_status{
+        color: white;
+    }
+}
+.containerSelectedCard{
+    display: flex;
+    justify-content: center;
+
+}

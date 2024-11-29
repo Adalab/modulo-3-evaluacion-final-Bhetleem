@@ -7,6 +7,7 @@ import CharacterDetail from "./CharacterDetail";
 import { matchPath, Route, Routes, useLocation } from "react-router-dom";
 import localStorage from "../services/localStorage";
 import "../scss/App.scss";
+import logo from "../images/logo.png";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -50,7 +51,7 @@ function App() {
 
   return (
     <>
-      <header className="header"><h1 className="header_title">Rick and Morty</h1></header>
+      <header className="header"><div className="header_container"><img className="header_container_logo" src={logo} alt="Logo Rick and Morty" /></div></header>
       <main className="main">
         <Routes>
           <Route path="/" element={(

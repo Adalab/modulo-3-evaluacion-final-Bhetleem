@@ -2,11 +2,17 @@
 
 .header{
     background-color: black;
-    &_title{
-        color: white;
+    display: flex;
+    justify-content: center;
+    &_container{
+        width: 500px;
+        &_logo{
+            width: 100%;
+        }
     }
 }
 
 .main{
     background-color: black;
+    
 }

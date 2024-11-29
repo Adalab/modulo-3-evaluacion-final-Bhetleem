@@ -1,15 +1,17 @@
+import "../scss/layout/CharacterDetail.scss";
 
 function CharacterDetail({character}) {
   return (
-    <section>
-        <img src={character.photo} alt={character.name} />
-        <h3>{character.name}</h3>
-        <h5>{character.specie}</h5>
-        <h5>From {character.planet}</h5>
-        <h5>{character.episodes} episodes</h5>
-        <h5>It's {character.status}</h5>
-
+    <div className="containerSelectedCard">
+    <section className="selectedCard">
+        <img className="selectedCard_image" src={character.photo} alt={character.name} />
+        <h3 className="selectedCard_name">{character.name}</h3>
+        <h5 className="selectedCard_specie">{character.specie}</h5>
+        <h5 className="selectedCard_planet">From {character.planet}</h5>
+        <h5 className="selectedCard_episodes">{character.episodes} episodes</h5>
+        <h5 className="selectedCard_status">It's {character.status}</h5>
     </section>
+    </div>
   )
 }
 

@@ -1,0 +1,11 @@
+.form{
+    display: flex;
+    justify-content: center;
+    &_input{
+        border-radius: 5px;
+        border: solid white;
+        padding: 1%;
+        background-color: rgb(181, 219, 223);
+        
+    }
+}

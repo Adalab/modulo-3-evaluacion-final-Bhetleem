@@ -13,8 +13,8 @@ function FilterByName({onChangeName, savedFilterName}) {
     }
     
   return (
-    <form onSubmit={enterPrevent}>
-        <input value={savedFilterName} onChange={handleSearchName} type="text" placeholder="Nombre del personaje..." />
+    <form onSubmit={enterPrevent} className="form">
+        <input className="form_input" value={savedFilterName} onChange={handleSearchName} type="text" placeholder="Nombre del personaje..." />
       
     </form>
   )
